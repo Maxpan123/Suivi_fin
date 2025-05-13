@@ -13,7 +13,7 @@ Base = declarative_base()
 
 # ----- Définition des tables -----
 class Transaction(Base):
-    __tablename__ = 'transactions'
+    __tablename__ = 'transac'
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     date = Column(Date, default=date.today)
@@ -24,12 +24,17 @@ class Transaction(Base):
     prix_unitaire = Column(Float, nullable=False)
     frais = Column(Float, default=0.0)
     devise = Column(String, default='EUR')
+    ticker = Column(String, nullable=False)
 
 class Valorisation(Base):
-  __tablename__ = 'valorisation'
-  date = Column(Date, primary_key=True)
-  isin = Column(String, primary_key=True)
-  prix_unitaire = Column(Float, nullable=False)
+    __tablename__ = 'valo'
+
+    date = Column(Date, primary_key=True)
+    isin = Column(String, primary_key=True)
+    ticker = Column(String, nullable=False)
+    prix_unitaire = Column(Float, nullable=False)
+
+Base.metadata.create_all(engine)
 
 print("Base de données créée avec succès !")
   
