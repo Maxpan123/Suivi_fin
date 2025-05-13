@@ -3,9 +3,9 @@ import streamlit as st
 from datetime import date
 from main import Session, Transaction  # On réutilise la session SQLAlchemy
 
-st.title("Ajouter une transaction")
+st.title("Ajouter une transac")
 
-with st.form("ajout_transaction"):
+with st.form("ajout_transac"):
     isin = st.text_input("ISIN")
     libelle = st.text_input("Libellé")
     type_op = st.selectbox("Type", ["achat", "vente"])
