@@ -3,7 +3,7 @@ from sqlalchemy import create_engine, Column, Integer, String, Float, Date, Enum
 from sqlalchemy.orm import declarative_base, sessionmaker
 from datetime import date
 # ----- Configuration de la base -----
-DATABASE_URL = "postgresql://postgres:Reya2991!@db.fprmskwjfxaaunovnwkv.supabase.co:5432/postgres"
+DATABASE_URL = "postgresql://DB_SUIFIN_owner:npg_tFPhX8frz0vi@ep-dawn-glade-ab96c3r5-pooler.eu-west-2.aws.neon.tech/DB_SUIFIN?sslmode=require"
 
 engine = create_engine(DATABASE_URL)
 Session = sessionmaker(bind=engine)
